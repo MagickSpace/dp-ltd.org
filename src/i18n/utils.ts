@@ -1,5 +1,5 @@
 import locales from 'astro:i18n'
-import { ui } from "./ui";
+import { ui, languages } from "./ui";
 
 export const LANGUAGES = {
   en: 'English',
@@ -12,6 +12,7 @@ export const LANGUAGES = {
 };
 
 export const DEFAULT_LANG = "uk";
+export type languages = keyof typeof LANGUAGES;
 export type LANGUAGES = keyof typeof locales;
 export type UiType = keyof typeof ui;
 export const LANGUAGES_ARRAY = Object.keys(LANGUAGES)
