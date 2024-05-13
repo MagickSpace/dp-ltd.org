@@ -7,8 +7,8 @@ import {
 	DEFAULT_LANG,
 	getLocalizedPathname,
 	type UiType,
-} from "../i18n/utils";
-import "../styles/global.css";
+} from "@/i18n/utils";
+import "@/styles/global.css";
 
 interface Props {
 	title: string;
@@ -23,10 +23,9 @@ const canonicalPathname = pathNameIsInLanguage(Astro.url.pathname, DEFAULT_LANG)
 const canonicalURL = new URL(canonicalPathname, Astro.site);
 
 const {
-	lang,
 	title,
 	description,
-	image = "/blog-placeholder-1.jpg",
+	image = "/og.png",
 } = Astro.props;
 
 const alternateLang = Object.keys(LANGUAGES);
@@ -39,9 +38,10 @@ const alternateLinks = alternateLang.map((_lang: UiType) => {
 ---
 
 <!-- Global Metadata -->
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
 <meta name="generator" content={Astro.generator} />
 
 <link rel="sitemap" href="/sitemap-index.xml" />
@@ -49,16 +49,9 @@ const alternateLinks = alternateLang.map((_lang: UiType) => {
 <!-- Font preloads -->
 <link
 	rel="preload"
-	href="/fonts/atkinson-regular.woff"
+	href="/fonts/inter.woff2"
 	as="font"
-	type="font/woff"
-	crossorigin
-/>
-<link
-	rel="preload"
-	href="/fonts/atkinson-bold.woff"
-	as="font"
-	type="font/woff"
+	type="font/woff2"
 	crossorigin
 />
 

@@ -1,0 +1,14 @@
+---
+import { Image } from "astro:assets";
+import LogoImage from "@/assets/favicon.svg";
+import { useTranslations } from "@/i18n/utils";
+
+const t = useTranslations();
+---
+
+<Image
+  src={LogoImage}
+  alt={t("siteMetadata.title")}
+  class="mx-auto my-1 h-auto w-auto"
+  loading="eager"
+/>

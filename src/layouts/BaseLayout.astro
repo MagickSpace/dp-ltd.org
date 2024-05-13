@@ -1,0 +1,57 @@
+---
+import type { CollectionEntry } from 'astro:content'
+import Footer from '@/components/layouts/Footer.astro'
+// Astro Imports - Components & Globas
+import HeadSEO from '@/components/layouts/HeadSEO.astro'
+import Navbar from '@/components/layouts/Navbar.astro'
+import Nav from '@/components/navbar/navbar.astro'
+
+// Props imterface
+interface Props {
+  title?: string | undefined
+  description?: string | undefined
+  ogImage?: URL | undefined
+  url?: URL | undefined
+  post?: CollectionEntry<'blog'>
+}
+
+// Astro Props
+const { title, description, ogImage, url, post } = Astro.props
+
+// Translation Imports
+import { getLangFromUrl } from '@/i18n/utils'
+import Container from '@/components/Container.astro'
+const lang = getLangFromUrl(Astro.url)
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <HeadSEO
+      title={title}
+      description={description}
+      ogImage={ogImage}
+      url={url}
+      post={post}
+    />
+  </head>
+  <body class='bg-background text-foreground'>
+
+    <Navbar />
+    <Nav />
+    <Container>
+      <main>
+        <noscript
+      ><iframe
+        src='https://www.googletagmanager.com/ns.html?id=GTM-T7CDGRPZ'
+        height='0'
+        width='0'
+        style='display:none;visibility:hidden'></iframe></noscript
+    >
+    <!-- End Google Tag Manager (noscript) -->
+        <slot />
+      </main>
+    </Container>
+    <Footer />
+  </body>
+</html>

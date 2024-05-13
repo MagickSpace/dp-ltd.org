@@ -1,0 +1,72 @@
+---
+
+// Translation Imports
+import { getLangFromUrl } from '@/i18n/utils'
+// Assets Imports - Info
+import LangLink from './LangLink.astro'
+import { Image } from 'astro:assets'
+import ukraine from '@/assets/flags/ukraine.png'
+import russia from '@/assets/flags/russia.png'
+import unitedkingdom from '@/assets/flags/united-kingdom.png'
+import spain from '@/assets/flags/spain.png'
+import france from '@/assets/flags/france.png'
+import germany from '@/assets/flags/germany.png'
+import poland from '@/assets/flags/poland.png'
+import Link from "@/components/link.astro";
+
+const lang: 'es' | 'en' | 'ru' | 'fr' | 'uk' | 'de' | 'pl' = getLangFromUrl(Astro.url)
+
+import {
+  Astronav,
+  MenuItems,
+  MenuIcon,
+} from "astro-navbar";
+
+
+import Logo from "@/components/Logo.astro"
+import { useTranslations } from "@/i18n/utils";
+import Container from './Container.astro'
+
+const t = useTranslations();
+---
+
+<Container>
+<header class="bg-trancperent flex flex-col lg:flex-row justify-between items-center my-5">
+  <Astronav closeOnClick>
+    <div class="flex w-full lg:w-auto items-center justify-between">
+      <a href=`/${lang}/`>
+      <span class="font-bold scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl text-foreground">dp</span><span
+            class="text-foreground mx-2">LTD</span
+          >
+    </a>
+      <div class="block lg:hidden">
+        <MenuIcon class="w-4 h-4 text-gray-800" />
+      </div>
+    </div>
+    <MenuItems class="hidden lg:flex">
+        <div class="mx-auto flex items-center justify-end gap-4">
+          <LangLink language="uk" isActive={lang == 'uk'}>
+            <Image src={ukraine} width={20} height={20} alt={lang} />
+          </LangLink>
+          <LangLink language="ru" isActive={lang == 'ru'}>
+            <Image src={russia} width={20} height={20} alt={lang} />
+          </LangLink>
+          <LangLink language="en" isActive={lang == 'en'}>
+            <Image src={unitedkingdom} width={20} height={20} alt={lang} />
+          </LangLink>
+          <LangLink language="es" isActive={lang == 'es'}>
+              <Image src={spain} width={20} height={20} alt={lang} />
+            </LangLink>
+            <LangLink language="de" isActive={lang == 'de'}>
+              <Image src={germany} width={20} height={20} alt={lang} />
+            </LangLink>
+            <LangLink language="fr" isActive={lang == 'fr'}>
+              <Image src={france} width={20} height={20} alt={lang} />
+            </LangLink>
+            <LangLink language="pl" isActive={lang == 'pl'}>
+              <Image src={poland} width={20} height={20} alt={lang} />
+            </LangLink>
+        </div>
+      </div>
+</header>
+</Container>

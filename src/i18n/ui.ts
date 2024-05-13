@@ -33,6 +33,12 @@ export const defaultLang = 'uk'
 
 export const ui = {
   pl: {
+    'siteMetadata.title': 'Astro Starter Blog',
+    'siteMetadata.headerTitle': 'Astro Starter Blog',   
+    'siteMetadata.description': 'A blog created with Astro and Tailwind.css',
+    'siteMetadata.language': 'pl-PL',
+
+    'hero-t': 'Explore Our Awesome Partners',
     'hero-description':
       'Experimenta la Excelencia en Boxeo y Kickboxing con Entrenamiento Personalizado a Domicilio en Marbella, Diseñado para Adaptarse a Tu Ritmo y Objetivos, Maximizando Tu Potencial en las Artes Marciales de Combate.',
     'sheetNav-title': 'En nuestra Pagina',
@@ -80,6 +86,12 @@ export const ui = {
     'toast-shop-cta': 'Tienda',
   },
   es: {
+    'siteMetadata.title': 'Astro Starter Blog',
+    'siteMetadata.headerTitle': 'Astro Starter Blog',   
+    'siteMetadata.description': 'A blog created with Astro and Tailwind.css',
+    'siteMetadata.language': 'es-ES',
+
+    'hero-t': 'Explore Our <br> Awesome Partners',
     'hero-description':
       'Experimenta la Excelencia en Boxeo y Kickboxing con Entrenamiento Personalizado a Domicilio en Marbella, Diseñado para Adaptarse a Tu Ritmo y Objetivos, Maximizando Tu Potencial en las Artes Marciales de Combate.',
     'sheetNav-title': 'En nuestra Pagina',
@@ -127,6 +139,12 @@ export const ui = {
     'toast-shop-cta': 'Tienda',
   },
   en: {
+    'siteMetadata.title': 'Astro Starter Blog',
+    'siteMetadata.headerTitle': 'Astro Starter Blog',   
+    'siteMetadata.description': 'A blog created with Astro and Tailwind.css',
+    'siteMetadata.language': 'en-GB',
+
+    'hero-t': 'Explore Our Awesome Partners',
     'hero-description':
       'Experience Excellence in Boxing and Kickboxing with Personalized In-Home Training, Designed to Fit Your Pace and Goals, Maximizing Your Potential in Combat Martial Arts.',
     'sheetNav-title': 'In Our Page',
@@ -173,6 +191,12 @@ export const ui = {
     'toast-shop-cta': 'Shop',
   },
   de: {
+    'siteMetadata.title': 'Astro Starter Blog',
+    'siteMetadata.headerTitle': 'Astro Starter Blog',   
+    'siteMetadata.description': 'A blog created with Astro and Tailwind.css',
+    'siteMetadata.language': 'de-DE',
+
+    'hero-t': 'Explore Our Awesome Partners',
     'hero-description':
       'Experience Excellence in Boxing and Kickboxing with Personalized In-Home Training, Designed to Fit Your Pace and Goals, Maximizing Your Potential in Combat Martial Arts.',
     'sheetNav-title': 'In Our Page',
@@ -219,6 +243,18 @@ export const ui = {
     'toast-shop-cta': 'Shop',
   },
   fr: {
+    'siteMetadata.title': 'Astro Starter Blog',
+    'siteMetadata.headerTitle': 'Astro Starter Blog',   
+    'siteMetadata.description': 'A blog created with Astro and Tailwind.css',
+    'siteMetadata.language': 'fr-FR',
+    
+    'hero-s1': '',
+    'hero-d1': '',
+    'hero-s2': '',
+    'hero-d2': '',
+    'hero-s3': '',
+    'hero-d3': '',
+    'hero-t': 'Explore Our Awesome Partners',
     'hero-description':
       'Experience Excellence in Boxing and Kickboxing with Personalized In-Home Training, Designed to Fit Your Pace and Goals, Maximizing Your Potential in Combat Martial Arts.',
     'sheetNav-title': 'In Our Page',
@@ -265,6 +301,12 @@ export const ui = {
     'toast-shop-cta': 'Shop',
   },
   ru: {
+    'siteMetadata.title': 'Astro Starter Blog',
+    'siteMetadata.headerTitle': 'Astro Starter Blog',   
+    'siteMetadata.description': 'A blog created with Astro and Tailwind.css',
+    'siteMetadata.language': 'ru-RU',
+
+    'hero-t': 'Explore Our Awesome Partners',
     'hero-description':
       'Experience Excellence in Boxing and Kickboxing with Personalized In-Home Training, Designed to Fit Your Pace and Goals, Maximizing Your Potential in Combat Martial Arts.',
     'sheetNav-title': 'In Our Page',
@@ -311,6 +353,12 @@ export const ui = {
     'toast-shop-cta': 'Shop',
   },
   uk: {
+    'siteMetadata.title': 'Astro Starter Blog',
+    'siteMetadata.headerTitle': 'Astro Starter Blog',   
+    'siteMetadata.description': 'A blog created with Astro and Tailwind.css',
+    'siteMetadata.language': 'uk-UA',
+
+    'hero-t': 'Explore Our Awesome Partners',
     'hero-description':
       'Experience Excellence in Boxing and Kickboxing with Personalized In-Home Training, Designed to Fit Your Pace and Goals, Maximizing Your Potential in Combat Martial Arts.',
     'sheetNav-title': 'In Our Page',

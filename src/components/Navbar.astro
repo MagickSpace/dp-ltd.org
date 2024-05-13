@@ -1,0 +1,108 @@
+---
+// Translation Imports
+import { getLangFromUrl } from '@/i18n/utils'
+// Assets Imports - Info
+import { navLinks } from '@/constants/index'
+import LangLink from './LangLink.astro'
+import { Image } from 'astro:assets'
+import ukraine from '@/assets/flags/ukraine.png'
+import russia from '@/assets/flags/russia.png'
+import unitedkingdom from '@/assets/flags/united-kingdom.png'
+import spain from '@/assets/flags/spain.png'
+import france from '@/assets/flags/france.png'
+import germany from '@/assets/flags/germany.png'
+import poland from '@/assets/flags/poland.png'
+
+const lang: 'es' | 'en' | 'ru' | 'fr' | 'uk' | 'de' | 'pl' = getLangFromUrl(Astro.url)
+---
+
+<div class="bg-trancperent border-b">
+    <div
+      class="mx-auto grid w-full max-w-full grid-cols-4 gap-6 px-6 py-2 text-sm text-slate-500 md:grid-cols-8 lg:max-w-5xl lg:grid-cols-12 xl:max-w-7xl 2xl:max-w-[96rem]"
+    >
+      <div class="col-span-2 items-center md:col-span-4 lg:col-span-6">
+        <a
+          href="javascript:void(0)"
+          class="flex items-center gap-2 transition-colors duration-300 hover:text-emerald-500"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="h-4 w-4"
+            role="img"
+            aria-labelledby="title-tb00 desc-tb00"
+          >
+            <title id="title-tb00">Call me!</title>
+            <desc id="desc-tb00">A more detailed description of the icon</desc>
+            <path
+              fill-rule="evenodd"
+              d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z"
+              clip-rule="evenodd"></path>
+          </svg>
+           +30964630524
+        </a>
+      </div>
+      <div
+        class="col-span-2 items-center justify-end gap-6 md:col-span-4 lg:col-span-6"
+      >
+        <div class="mx-auto flex items-center justify-end gap-4">
+          <LangLink language="uk" isActive={lang == 'uk'}>
+            <Image src={ukraine} width={20} height={20} alt={lang} />
+          </LangLink>
+          <LangLink language="ru" isActive={lang == 'ru'}>
+            <Image src={russia} width={20} height={20} alt={lang} />
+          </LangLink>
+          <LangLink language="en" isActive={lang == 'en'}>
+            <Image src={unitedkingdom} width={20} height={20} alt={lang} />
+          </LangLink>
+          <LangLink language="es" isActive={lang == 'es'}>
+              <Image src={spain} width={20} height={20} alt={lang} />
+            </LangLink>
+            <LangLink language="de" isActive={lang == 'de'}>
+              <Image src={germany} width={20} height={20} alt={lang} />
+            </LangLink>
+            <LangLink language="fr" isActive={lang == 'fr'}>
+              <Image src={france} width={20} height={20} alt={lang} />
+            </LangLink>
+            <LangLink language="pl" isActive={lang == 'pl'}>
+              <Image src={poland} width={20} height={20} alt={lang} />
+            </LangLink>
+        </div>
+      </div>
+    </div>
+  </div>
+<header class=" top-0 w-full border-b bg-background">
+  <div
+    class="container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0"
+  >
+    <!-- Logo -->
+    <div class="flex gap-6 md:gap-10">
+      <a href="/" class="flex items-center space-x-2" title="Home Link">
+        <span class="inline-block text-2xl font-bold">DevOpSick</span>
+      </a>
+    </div>
+    <div class="flex flex-1 items-center justify-end space-x-4">
+      <!-- Navlinks Lists -->
+      <nav class="flex items-center space-x-3">
+        <ul
+          class="text-text/90 hidden items-center justify-between gap-5 md:flex"
+        >
+          {
+            navLinks.map((link) => (
+              <li>
+                <a
+                  title={`Link to ${link.label}`}
+                  class="transition-colors duration-200 hover:text-primary-my"
+                  href={`/${lang}${link.link}`}
+                >
+                  {link.label[lang]}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>

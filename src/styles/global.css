@@ -8,6 +8,8 @@
     --color-background-my: oklch(18.67% 0 0);
     --color-secondary-my: oklch(73.46% 0.185 152.73);
 
+    --color-background-card: oklch(14.08% 0.004 285.82);
+    --color-neon-yellow: oklch(94.44% 0.194 106.75);
     --color-neon-pink: oklch(71.7% 0.25 360);
     --color-neon-lime: oklch(91.5% 0.258 129);
     --color-neon-cyan: oklch(91.3% 0.139 195.8);
@@ -51,23 +53,6 @@
   --border-radius-md: calc(var(--border-radius-lg) - 2px);
   --border-radius-sm: calc(var(--border-radius-md) - 2px);
 
-  @keyframes accordion-down {
-    0% {
-      height: 0;
-    }
-    100% {
-      height: var(--radix-accordion-content-height);
-    }
-  }
-
-  @keyframes accordion-up {
-    0% {
-      height: var(--radix-accordion-content-height);
-    }
-    100% {
-      height: 0;
-    }
-  }
 
   --animate-accordion-down: accordion-down 200ms ease-in-out;
   --animate-accordion-up: accordion-up 200ms ease-in-out;
@@ -655,6 +640,24 @@
       outline-style: var(--tw-outline-style);
       outline-width: 1px;
     }
+    }
+
+    @keyframes accordion-down {
+      0% {
+        height: 0;
+      }
+      100% {
+        height: var(--radix-accordion-content-height);
+      }
+    }
+  
+    @keyframes accordion-up {
+      0% {
+        height: var(--radix-accordion-content-height);
+      }
+      100% {
+        height: 0;
+      }
     }
 
     @keyframes accordion-down {

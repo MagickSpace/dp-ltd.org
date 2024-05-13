@@ -11,8 +11,22 @@ export const LANGUAGES = {
   pl: 'Poland',
 };
 
+
+export const LOCALES = {
+  en: "en-GB",
+  es: "es-ES",
+  fr: "fr-FR",
+  ru: 'ru-UA',
+  uk: 'uk-UA',
+  de: 'de-DE',
+  pl: 'pl-PL',
+}
+
+
 export const DEFAULT_LANG = "uk";
+export const DEFAULT_LANGUAGE = DEFAULT_LANG
 export type languages = keyof typeof LANGUAGES;
+export type LOCALES = keyof typeof locales;
 export type LANGUAGES = keyof typeof locales;
 export type UiType = keyof typeof ui;
 export const LANGUAGES_ARRAY = Object.keys(LANGUAGES)
