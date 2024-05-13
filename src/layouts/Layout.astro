@@ -1,13 +1,12 @@
 ---
-import BaseHead from "@/components/BaseHead.astro";
-import { useTranslations, type UiType } from "@/i18n/utils";
-import I18NHeaders from "@/components/I18nHeaders.astro";
-import Navigation from "@/components/Navigation.astro";
+import BaseHead from '@/components/BaseHead.astro'
+import I18NHeaders from '@/components/I18nHeaders.astro'
+import Navigation from '@/components/Navigation.astro'
+import { type UiType, useTranslations } from '@/i18n/utils'
 
-const { title, description, lang } =
-  Astro.props;
+const { title, description, lang } = Astro.props
 
-const t = useTranslations(lang as UiType);
+const t = useTranslations(lang as UiType)
 ---
 
 <!doctype html>

@@ -18,9 +18,9 @@ interface Props {
 // Astro Props
 const { title, description, ogImage, url, post } = Astro.props
 
+import Container from '@/components/Container.astro'
 // Translation Imports
 import { getLangFromUrl } from '@/i18n/utils'
-import Container from '@/components/Container.astro'
 const lang = getLangFromUrl(Astro.url)
 ---
 

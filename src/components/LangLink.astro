@@ -4,13 +4,20 @@ import type { HTMLAttributes } from 'astro/types'
 
 type Props = HTMLAttributes<'a'>
 
-const { language, class: className, ...props } = Astro.props as { language: string, class: string, [key: string]: any }
+const {
+  language,
+  class: className,
+  ...props
+} = Astro.props as { language: string; class: string; [key: string]: any }
 const { pathname } = Astro.url
 
 const lang = Astro.params?.['lang'] || 'en'
 const isActive = language === lang
 
-const href = getLocalizedPathname(pathname, language as  "pl" | "uk" | "es" | "en" | "de" | "fr" | "ru")
+const href = getLocalizedPathname(
+  pathname,
+  language as 'pl' | 'uk' | 'es' | 'en' | 'de' | 'fr' | 'ru',
+)
 ---
 
 

@@ -2,39 +2,35 @@
 // Import the global.css file here so that it is included on
 // all pages through the use of the <BaseHead /> component.
 import {
-	LANGUAGES,
-	pathNameIsInLanguage,
-	DEFAULT_LANG,
-	getLocalizedPathname,
-	type UiType,
-} from "@/i18n/utils";
-import "@/styles/global.css";
+  DEFAULT_LANG,
+  LANGUAGES,
+  type UiType,
+  getLocalizedPathname,
+  pathNameIsInLanguage,
+} from '@/i18n/utils'
+import '@/styles/global.css'
 
 interface Props {
-	title: string;
-	description: string;
-	image?: string;
-	lang: string;
+  title: string
+  description: string
+  image?: string
+  lang: string
 }
 
 const canonicalPathname = pathNameIsInLanguage(Astro.url.pathname, DEFAULT_LANG)
-	? Astro.url.pathname
-	: getLocalizedPathname(Astro.url.pathname, DEFAULT_LANG);
-const canonicalURL = new URL(canonicalPathname, Astro.site);
+  ? Astro.url.pathname
+  : getLocalizedPathname(Astro.url.pathname, DEFAULT_LANG)
+const canonicalURL = new URL(canonicalPathname, Astro.site)
 
-const {
-	title,
-	description,
-	image = "/og.png",
-} = Astro.props;
+const { title, description, image = '/og.png' } = Astro.props
 
-const alternateLang = Object.keys(LANGUAGES);
+const alternateLang = Object.keys(LANGUAGES)
 const alternateLinks = alternateLang.map((_lang: UiType) => {
-	return {
-		href: new URL(getLocalizedPathname(Astro.url.pathname, _lang), Astro.site),
-		hreflang: _lang,
-	};
-});
+  return {
+    href: new URL(getLocalizedPathname(Astro.url.pathname, _lang), Astro.site),
+    hreflang: _lang,
+  }
+})
 ---
 
 <!-- Global Metadata -->

@@ -1,13 +1,10 @@
 ---
 
-import { getLangFromUrl, useTranslations } from '@/i18n/utils'
 import { Image } from 'astro:assets'
-import Pic1 from '@/assets/gif/factory.gif'
 import Pic2 from '@/assets/gif/co.gif'
+import Pic1 from '@/assets/gif/factory.gif'
 import Pic3 from '@/assets/gif/fire.gif'
 import Pic4 from '@/assets/gif/speed.gif'
-import { Separator } from '@/components/ui/separator'
-import FooterLinks from './link.astro'
 import { Button } from '@/components/ui/button'
 import {
   Card,
@@ -17,6 +14,9 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card'
+import { Separator } from '@/components/ui/separator'
+import { getLangFromUrl, useTranslations } from '@/i18n/utils'
+import FooterLinks from './link.astro'
 
 const lang = getLangFromUrl(Astro.url)
 const t = useTranslations(lang)

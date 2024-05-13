@@ -26,7 +26,7 @@ export const languages = {
   pl: {
     route: '/pl/',
     icon: 'pl',
-  }
+  },
 }
 
 export const defaultLang = 'uk'
@@ -34,7 +34,7 @@ export const defaultLang = 'uk'
 export const ui = {
   pl: {
     'siteMetadata.title': 'Astro Starter Blog',
-    'siteMetadata.headerTitle': 'Astro Starter Blog',   
+    'siteMetadata.headerTitle': 'Astro Starter Blog',
     'siteMetadata.description': 'A blog created with Astro and Tailwind.css',
     'siteMetadata.language': 'pl-PL',
 
@@ -87,7 +87,7 @@ export const ui = {
   },
   es: {
     'siteMetadata.title': 'Astro Starter Blog',
-    'siteMetadata.headerTitle': 'Astro Starter Blog',   
+    'siteMetadata.headerTitle': 'Astro Starter Blog',
     'siteMetadata.description': 'A blog created with Astro and Tailwind.css',
     'siteMetadata.language': 'es-ES',
 
@@ -140,7 +140,7 @@ export const ui = {
   },
   en: {
     'siteMetadata.title': 'Astro Starter Blog',
-    'siteMetadata.headerTitle': 'Astro Starter Blog',   
+    'siteMetadata.headerTitle': 'Astro Starter Blog',
     'siteMetadata.description': 'A blog created with Astro and Tailwind.css',
     'siteMetadata.language': 'en-GB',
 
@@ -192,7 +192,7 @@ export const ui = {
   },
   de: {
     'siteMetadata.title': 'Astro Starter Blog',
-    'siteMetadata.headerTitle': 'Astro Starter Blog',   
+    'siteMetadata.headerTitle': 'Astro Starter Blog',
     'siteMetadata.description': 'A blog created with Astro and Tailwind.css',
     'siteMetadata.language': 'de-DE',
 
@@ -244,10 +244,10 @@ export const ui = {
   },
   fr: {
     'siteMetadata.title': 'Astro Starter Blog',
-    'siteMetadata.headerTitle': 'Astro Starter Blog',   
+    'siteMetadata.headerTitle': 'Astro Starter Blog',
     'siteMetadata.description': 'A blog created with Astro and Tailwind.css',
     'siteMetadata.language': 'fr-FR',
-    
+
     'hero-s1': '',
     'hero-d1': '',
     'hero-s2': '',
@@ -302,7 +302,7 @@ export const ui = {
   },
   ru: {
     'siteMetadata.title': 'Astro Starter Blog',
-    'siteMetadata.headerTitle': 'Astro Starter Blog',   
+    'siteMetadata.headerTitle': 'Astro Starter Blog',
     'siteMetadata.description': 'A blog created with Astro and Tailwind.css',
     'siteMetadata.language': 'ru-RU',
 
@@ -354,7 +354,7 @@ export const ui = {
   },
   uk: {
     'siteMetadata.title': 'Astro Starter Blog',
-    'siteMetadata.headerTitle': 'Astro Starter Blog',   
+    'siteMetadata.headerTitle': 'Astro Starter Blog',
     'siteMetadata.description': 'A blog created with Astro and Tailwind.css',
     'siteMetadata.language': 'uk-UA',
 

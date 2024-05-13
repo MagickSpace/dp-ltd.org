@@ -1,19 +1,21 @@
 ---
-// Translation Imports
-import { getLangFromUrl } from '@/i18n/utils'
-// Assets Imports - Info
-import { navLinks } from '@/constants/index'
-import LangLink from './LangLink.astro'
 import { Image } from 'astro:assets'
-import ukraine from '@/assets/flags/ukraine.png'
-import russia from '@/assets/flags/russia.png'
-import unitedkingdom from '@/assets/flags/united-kingdom.png'
-import spain from '@/assets/flags/spain.png'
 import france from '@/assets/flags/france.png'
 import germany from '@/assets/flags/germany.png'
 import poland from '@/assets/flags/poland.png'
+import russia from '@/assets/flags/russia.png'
+import spain from '@/assets/flags/spain.png'
+import ukraine from '@/assets/flags/ukraine.png'
+import unitedkingdom from '@/assets/flags/united-kingdom.png'
+// Assets Imports - Info
+import { navLinks } from '@/constants/index'
+// Translation Imports
+import { getLangFromUrl } from '@/i18n/utils'
+import LangLink from './LangLink.astro'
 
-const lang: 'es' | 'en' | 'ru' | 'fr' | 'uk' | 'de' | 'pl' = getLangFromUrl(Astro.url)
+const lang: 'es' | 'en' | 'ru' | 'fr' | 'uk' | 'de' | 'pl' = getLangFromUrl(
+  Astro.url,
+)
 ---
 
 <div class="bg-trancperent border-b">

@@ -1,29 +1,23 @@
 ---
-import Layout from "@/layouts/Layout.astro";
-import { getLangFromUrl, useTranslations } from "@/i18n/utils";
-import Features from "@/components/Features.astro";
-import Hero from "@/components/Hero.astro"
-import Cta2 from "@/components/Cta2.astro";
-import Cta from "@/components/Cta.astro";
-import About from "@/components/About.astro";
-import Start from "@/components/Start.astro"
+import About from '@/components/About.astro'
+import Cta from '@/components/Cta.astro'
+import Cta2 from '@/components/Cta2.astro'
+import Features from '@/components/Features.astro'
+import Hero from '@/components/Hero.astro'
+import Start from '@/components/Start.astro'
+import { getLangFromUrl, useTranslations } from '@/i18n/utils'
+import Layout from '@/layouts/Layout.astro'
 
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
 ---
 
 <Layout title={t("about-title")} description={t("about-title")} lang={lang}>
-  <Start />
-  <About />
   <Cta />
   <Cta2 />
+  <About />
   <Hero />
   <Features />
-
-    <h1>{t("hero-description")}</h1>
-    <p>
-      {t("hero-description")}
-    </p>
-
+  <Start />
 </Layout>
 

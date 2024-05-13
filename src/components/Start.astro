@@ -1,22 +1,25 @@
 ---
-import { getLangFromUrl, useTranslations } from '@/i18n/utils'
-// Assets Imports - Info
-import LangLink from './LangLink.astro'
 import { Image } from 'astro:assets'
-import ukraine from '@/assets/flags/ukraine.png'
-import russia from '@/assets/flags/russia.png'
-import unitedkingdom from '@/assets/flags/united-kingdom.png'
-import spain from '@/assets/flags/spain.png'
 import france from '@/assets/flags/france.png'
 import germany from '@/assets/flags/germany.png'
 import poland from '@/assets/flags/poland.png'
-import Link from "@/components/link.astro";
+import russia from '@/assets/flags/russia.png'
+import spain from '@/assets/flags/spain.png'
+import ukraine from '@/assets/flags/ukraine.png'
+import unitedkingdom from '@/assets/flags/united-kingdom.png'
 import finance from '@/assets/high-logo.png'
+import Link from '@/components/link.astro'
+import { getLangFromUrl, useTranslations } from '@/i18n/utils'
+// Assets Imports - Info
+import LangLink from './LangLink.astro'
+import { ThreeDCardDemo } from '@/components/react/threed-card'
 
-const lang: 'es' | 'en' | 'ru' | 'fr' | 'uk' | 'de' | 'pl' = getLangFromUrl(Astro.url)
-import Logo from "@/components/Logo.astro"
+const lang: 'es' | 'en' | 'ru' | 'fr' | 'uk' | 'de' | 'pl' = getLangFromUrl(
+  Astro.url,
+)
+import Logo from '@/components/Logo.astro'
 import Container from './Container.astro'
-const t = useTranslations();
+const t = useTranslations()
 ---
 
 <div
@@ -121,11 +124,7 @@ const t = useTranslations();
          <div class="w-full px-4 lg:w-6/12">
             <div class="lg:ml-auto lg:text-right">
                <div class="relative z-10 inline-block pt-11 lg:pt-0">
-                  <Image
-                     src={finance}
-                     alt="hero"
-                     class="max-w-full lg:ml-auto"
-                     />
+                  <ThreeDCardDemo client:visible />
                   <span class="absolute -left-8 -bottom-8 z-[-1]">
                      <svg
                         width="93"
